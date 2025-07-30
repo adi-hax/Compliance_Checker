@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Security Compliance Report</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .report-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 500px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .item {
+            margin-bottom: 10px;
+        }
+        .label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="report-box">
+        <h1>Security Compliance Report</h1>
+        {% if data.error %}
+            <p style="color:red;">{{ data.error }}</p>
+        {% else %}
+            {% for key, value in data.items() %}
+                <div class="item">
+                    <span class="label">{{ key.replace('_', ' ').title() }}:</span> {{ value }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+</body>
+</html>

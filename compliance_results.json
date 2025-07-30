@@ -1,0 +1,16 @@
+{
+    "hostname": "DESKTOP-24IEKAT",
+    "os": "Windows 10",
+    "antivirus": "Installed",
+    "antivirus_names": [
+        "-----------",
+        "Windows Defender"
+    ],
+    "minimum_password_length": "0",
+    "maximum_password_age_days": "42",
+    "account_lockout_threshold": "10",
+    "Firewall": "Domain",
+    "State": "On",
+    "Inbound Policy": "Blocked",
+    "Outbound Policy": "Allowed"
+}
